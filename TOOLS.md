@@ -1,142 +1,12 @@
-## Rocksky CLI
+# Rocksky MCP Tools
 
-🎧 The official command-line interface for [Rocksky](https://rocksky.app) — a modern, decentralized music tracking and discovery platform built on the [AT Protocol](https://atproto.com).
+This document provides a comprehensive list of all tools available in the Rocksky MCP server.
 
-## Features
-- 🔐 Authenticate with your Rocksky account using OAuth
-- 🎵 View your currently playing track
-- 📈 See your recent scrobbles
-- 📤 Manually scrobble tracks
-- 🛠️ Useful developer tools for integrating Rocksky into your workflows
-- 🤖 MCP Server
-
-## Table of Contents
-- [Installation](#installation)
-- [Run in development](#run-in-development)
-- [Usage](#usage)
-- [Available Commands](#available-commands)
-  - [login](#login)
-  - [nowplaying](#nowplaying)
-  - [scrobbles](#scrobbles)
-  - [search](#search)
-  - [stats](#stats)
-  - [artists](#artists)
-  - [albums](#albums)
-  - [tracks](#tracks)
-  - [scrobble](#scrobble)
-  - [mcp](#mcp)
-- [Rocksky MCP Server Tools](#rocksky-mcp-server-tools)
-
-
-## Installation
-
-```sh
-npm install -g @rocksky/cli
-```
-
-You can also use the CLI without installing it globally by running `npx`:
-
-```sh
-npx @rocksky/cli --help
-```
-
-## Run in development
-To run the CLI in development mode, install the dependencies:
-
-```bash
-bun install
-```
-
-Then, run the CLI with:
-
-```bash
-bun run dev --help
-```
-
-
-## Usage
-
-```bash
-rocksky <command> [options]
-```
-
-## Available Commands
-
-`login` - Initiates a browser-based OAuth login flow and saves your access token securely on your machine.
-
-```bash
-rocksky login
-```
-
-`nowplaying` - Displays the currently playing track on your/other Rocksky account.
-
-```bash
-rocksky nowplaying
-```
-
-`scrobbles` - Lists all recently scrobbled tracks.
-
-```bash
-rocksky scrobbles
-```
-
-`search` - Searches for tracks, albums, artists or Rocksky users.
-
-```bash
-rocksky search <query>
-```
-
-`stats` - Displays your Rocksky account statistics.
-
-```bash
-rocksky stats [did]
-```
-
-`artists` - Lists the user's top artists.
-
-```bash
-rocksky artists [did]
-```
-
-`albums` - Lists the user's top albums.
-
-```bash
-rocksky albums [did]
-```
-
-`tracks` - Lists the user's top tracks.
-
-```bash
-rocksky tracks [did]
-```
-
-`scrobble` - Manually scrobbles a track.
-
-```bash
-rocksky scrobble "Karma Police" "Radiohead"
-```
-
-`whoami` - Displays the current user's information.
-
-```bash
-rocksky whoami
-```
-
-`mcp` - Starts the Rocksky MCP server.
-
-```bash
-rocksky mcp
-```
-
-## Rocksky MCP Server Tools
-
-Here is a list of tools provided by the Rocksky MCP server:
-
-### whoami
+## whoami
 
 Get the current user's information.
 
-### nowplaying
+## nowplaying
 
 Get the currently playing track.
 
@@ -157,7 +27,7 @@ Get the currently playing track.
 **Returns:**
 The currently playing track for the specified user.
 
-### scrobbles
+## scrobbles
 
 Display recently played tracks (recent scrobbles).
 
@@ -177,7 +47,7 @@ Display recently played tracks (recent scrobbles).
 **Returns:**
 A list of recently played tracks for the specified user.
 
-### my-scrobbles
+## my-scrobbles
 
 Display recently played tracks (recent scrobbles) for the current user.
 
@@ -191,7 +61,7 @@ Display recently played tracks (recent scrobbles) for the current user.
 **Returns:**
 A list of recently played tracks for the current user.
 
-### search
+## search
 Search for tracks, albums, artists, or Rocksky users.
 
 **Parameters:**
@@ -220,7 +90,7 @@ Search for tracks, albums, artists, or Rocksky users.
 **Returns:**
 A list of search results based on the specified query and filters.
 
-### artists
+## artists
 List the user's top artists or current user's top artists if no `did` is provided.
 
 **Parameters:**
@@ -241,7 +111,7 @@ List the user's top artists or current user's top artists if no `did` is provide
 **Returns:**
 A list of the user's top artists, including their names and play counts.
 
-### albums
+## albums
 List the user's top albums or current user's top albums if no `did` is provided.
 
 **Parameters:**
@@ -262,7 +132,7 @@ List the user's top albums or current user's top albums if no `did` is provided.
 **Returns:**
 A list of the user's top albums, including their names and play counts.
 
-### tracks
+## tracks
 List the user's top tracks or current user's top tracks if no `did` is provided.
 
 **Parameters:**
@@ -283,7 +153,7 @@ List the user's top tracks or current user's top tracks if no `did` is provided.
 **Returns:**
 A list of the user's top tracks, including their names and play counts.
 
-### stats
+## stats
 Display the user's Rocksky account statistics or current user's statistics if no `did` is provided.
 
 **Parameters:**
@@ -299,7 +169,7 @@ Display the user's Rocksky account statistics or current user's statistics if no
 }
 ```
 
-### create-apikey
+## create-apikey
 Create a new API key for the current user.
 
 **Parameters:**
